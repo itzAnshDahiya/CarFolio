@@ -525,6 +525,135 @@ footer{
         padding: 0 .5rem;
         height: 2.5rem;
     }
+    #car-count, #carCount{
+        width: 100%;
+    }
+    .hero-section{
+        padding: 5rem 2rem;
+    }
+    #submit{
+        height: 2.5rem;
+    }
+    
+    footer{
+        width: 100vw;
+        padding: .8rem .2rem;
+        gap: 1rem;
+        font-size: .6rem;
+    }
+    .footer-logo{
+        display: none;
+    }
+    .footer-logo-txt{
+        font-size: .7rem;
+    }
+    .footer-description{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    .CodeCraft{
+        text-decoration: none;
+        font-weight: 600;
+        color: #3d8bff;
+        cursor: pointer;
+        font-size: .7rem;
+    }
+    .footer-social{
+        text-decoration: none;
+        color: rgb(182, 192, 219);
+        font-weight: 700;
+        font-size: .7rem;
+    }
+    .footer-social:hover{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    .creator{
+        color: white;
+        font-size: .7rem;
+    }
+    .github{
+        text-decoration: none;
+        font-size: .5rem;
+        color: rgb(182, 192, 219);
+        font-weight: 600;
+    }
+    .github:hover{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    .logo-img{
+        height: 2rem;
+    }
+    .logo-txt{
+        font-size: 1.4rem;
+    }
+    .nav-btn a{
+        margin: 0 .2rem;
+        font-size: .69rem;
+    }
+    .cta{
+        padding: .625rem 1.1rem;
+    }
+    .banner{
+        font-size: .7rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .logo a{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 822px) {
+    .car-type{
+        width: 100%;
+    }
+    #car-count, #carCount{
+        width: 100%;
+    }
+}
+
+.loader {
+    margin-top: 2rem;
+    position: relative;
+    animation: loader 1s ease-in-out infinite;
+}
+#loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    opacity: 0;
+}
+
+@keyframes loader {
+    0%   { top: 0px; }
+    25%  { top: -10px; }
+    75%  { top: 5px; }
+    100% { top: 0px; }
+}
+.loader-txt {
+    position: relative;
+    animation: fadeText 1s ease-in-out infinite;
+}
+
+@keyframes fadeText {
+    0%, 100% { opacity: .5; }
+    50% { opacity: 1; }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0rem;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+}
 
 .field {
     display: flex;
