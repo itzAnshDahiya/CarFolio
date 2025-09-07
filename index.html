@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Images/car-icon.svg">
+    <title>CarFolio - Your Vehicle Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="https://kit.fontawesome.com/b6fe51c8e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./Images/car-logo.png" width="40" alt="CarFolio Logo"/>
+            <a href='index.html' class="logo-txt">Car<span class="txt-gradient">Folio</span></a>
+        </div>
+        <div class="nav-btn">
+            <a href="https://x.com/AnshDahiya" target="_blank" class="twitter-btn">Twitter</a>
+            <a href="https://github.com/ItzAnshDahiya" target="_blank" class="github-btn"><i class="fa-regular fa-star"></i>Star on Github</a>
+        </div>
+    </nav>
+    <main class="hero-section">
+        <div class="image">
+            <img src="./Images/futuristic-car-banner.png" class="banner-img" alt="Futuristic car banner">
+            <img src="https://playota.app/_next/static/media/circleThing.144242df.svg" class="circle" alt="Decorative circle">
+        </div>
+        <div class="txt-content">
+            <h1 class="title">Your <span class="svg-img">Vehicle</span> Explorer</h1>
+            <p class="details">Unleash the power of modern machinery with **CarFolio**. <span class="highlight">Select the number of car models</span> you want to view and <span class="highlight">choose the perfect make or class</span>. Whether you're a casual enthusiast or a dedicated collector, discover the full details of each vehicle and expand your automotive knowledge!</p>
+        </div>
+        <div class="input">
+            <form id="carForm" onsubmit="start(event)">
+                <input list="car-makes" class="car-type" id="carType" name="car-type" placeholder="Enter Car Make">
+                <datalist id="car-makes">
+                    <option value="Abarth">
+                    <option value="Audi">
+                    <option value="BMW">
+                    <option value="Bugatti">
+                    <option value="Cadillac">
+                    <option value="Chevrolet">
+                    <option value="Citroen">
+                    <option value="Datsun">
+                    <option value="Ferrari">
+                    <option value="Fiat">
+                    <option value="Ford">
+                    <option value="Honda">
+                    <option value="Hyundai">
+                    <option value="Jaguar">
+                    <option value="Kia">
+                    <option value="Lamborghini">
+                    <option value="Land Rover">
+                    <option value="Mahindra">
+                    <option value="Maruti Suzuki">
+                    <option value="Mercedes-Benz">
+                    <option value="MG">
+                    <option value="Nissan">
+                    <option value="Porsche">
+                    <option value="Renault">
+                    <option value="Rolls-Royce">
+                    <option value="Skoda">
+                    <option value="Tata">
+                    <option value="Tesla">
+                    <option value="Toyota">
+                    <option value="Volkswagen">
+                </datalist>
+                <input type="number" id="carCount" class="car-type" min="1" max="100" placeholder="Number of Cars" required>
+                <button id="submit"><i class="fa-solid fa-magnifying-glass"></i>Fetch Vehicles</button>
+            </form>
+        </div>
+        <div id="loader">
+            <img src="./Images/car-loader.svg" width="30" class="loader" alt="Loading spinner">
+            <span class="loader-txt">Loading..</span>
+        </div>
+        <div class="container" id="scroll">
+            <div style="font-size: .9rem;">Scroll Down For the Details.</div>
+            <div class="field">
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </main>
+    <section class="display-section" id="parent">
+        <div class="result-card" id="parentResult">
+            <h3 class="sub-heading"><span id="totalCars"></span><span class="carType"></span></h3>
+            <p class="display"><p><span id="carType" class="highlight"></span><span class="totalCars" class="highlight"></span></p>
+        </p>
+        </div>
+        <div class="car-cards" id="parentCards">
+            <div id="card1" class="cards" style="display:none">
+                <div class="card-img"><img src="./Images/placeholder-car.svg" alt="Placeholder car image"></div>
+                <div class="card-content">
+                    <span class="title">Tesla Model S</span>
+                    <span class="type-class"><span class="card-type">Electric</span></span>
+                    <div class="card-details">
+                        <span class="stats">
+                            <span class="hp">HP <span id="hp">1020</span></span>
+                            <span class="hp">Top Speed <span id="cp">200 mph</span></span>
+                        </span>
+                        <span class="weakness-strengths">
+                            <span class="hp"><span id="resistant1"><i class="fa-solid fa-shield"></i> Efficiency</span></span>
+                            <span class="hp"><span id="resistant2"><i class="fa-solid fa-shield"></i> Low Maintenance</span></span>
+                            <span class="hp"><span id="weakness1"><i class="fa-solid fa-link-slash"></i> Charging Time</span></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-logo nav-logo">
+            <div class="logo">
+                <img src="./Images/car-logo.png" width="40" alt="CarFolio Logo"/>
+                <a href='Index.html' class="logo-txt">Car<span class="txt-gradient">Folio</span></a>
+            </div>
+        </div>
+        <div class="footer-description">Built with <img src="./Images/car-icon.svg" width="12px" alt="Car icon"> by <span class="creator">Ansh Dahiya</span>, the mind behind <a href="https://atmosonic.netlify.app" target="_blank" class="CodeCraft">AtmoSonic</a>.</div>
+    </footer>
 </body>
 </html>
